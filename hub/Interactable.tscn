@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bdokgc33acm3h"]
+
+[ext_resource type="Script" uid="uid://d0u2moe6n1sex" path="res://scripts/interactable.gd" id="1_myjnd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_va5i3"]
+radius = 100.0
+
+[sub_resource type="Gradient" id="Gradient_myjnd"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_va5i3"]
+gradient = SubResource("Gradient_myjnd")
+
+[node name="Interactable" type="Area2D" unique_id=72740403]
+script = ExtResource("1_myjnd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=772567483]
+shape = SubResource("CircleShape2D_va5i3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=859446412]
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_va5i3")
+
+[node name="Label" type="Label" parent="." unique_id=805552338]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "E"

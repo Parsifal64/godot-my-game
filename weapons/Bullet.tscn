@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cr57xbycr13ok"]
+
+[ext_resource type="Script" uid="uid://bpoi0yldqhrgn" path="res://weapons/Bullet.gd" id="1_l3mcc"]
+
+[sub_resource type="Gradient" id="Gradient_l3mcc"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_avtco"]
+gradient = SubResource("Gradient_l3mcc")
+width = 10
+height = 10
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avtco"]
+radius = 5.0
+
+[node name="Bullet" type="CharacterBody2D" unique_id=773850421]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_l3mcc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1215292377]
+texture = SubResource("GradientTexture2D_avtco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1657476829]
+shape = SubResource("CircleShape2D_avtco")

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c3iwci0iaj57s"]
+
+[ext_resource type="Script" uid="uid://c3ta8w4d6yf4" path="res://player/Player.gd" id="1_3c3w1"]
+[ext_resource type="Texture2D" uid="uid://ba58mdj7t6ijx" path="res://icon.svg" id="2_kne1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
+size = Vector2(128, 128)
+
+[sub_resource type="Gradient" id="Gradient_3c3w1"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wnvi2"]
+gradient = SubResource("Gradient_3c3w1")
+width = 5
+height = 5
+
+[node name="Player" type="CharacterBody2D" unique_id=1648748067 groups=["player"]]
+script = ExtResource("1_3c3w1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1311463680]
+texture = ExtResource("2_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291874495]
+shape = SubResource("RectangleShape2D_e80uo")
+
+[node name="BulletSpawn" type="Marker2D" parent="." unique_id=609015797]
+
+[node name="MeleeSwing" type="Node2D" parent="." unique_id=1047753574]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="MeleeSwing" unique_id=1115020394]
+texture = SubResource("GradientTexture2D_wnvi2")

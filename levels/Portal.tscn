@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://yg1trnasfrxt"]
+
+[ext_resource type="Script" uid="uid://dblup0p7m27fo" path="res://levels/Portal.gd" id="1_wwv8w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_db4k4"]
+radius = 40.0
+
+[sub_resource type="Gradient" id="Gradient_itlg0"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3fai4"]
+gradient = SubResource("Gradient_itlg0")
+width = 40
+height = 40
+
+[node name="Portal" type="Area2D" unique_id=191017024]
+script = ExtResource("1_wwv8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1794544239]
+shape = SubResource("CircleShape2D_db4k4")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=907847652]
+texture = SubResource("GradientTexture2D_3fai4")

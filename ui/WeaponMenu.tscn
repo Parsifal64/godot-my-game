@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bkxxoyk0yrr0l"]
+
+[ext_resource type="Script" uid="uid://71k2faeoccno" path="res://scripts/weapon_menu.gd" id="1_8in4s"]
+
+[node name="WeaponMenu" type="CanvasLayer" unique_id=113474605]
+script = ExtResource("1_8in4s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=946821641]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.70000005)
+
+[node name="Panel" type="Panel" parent="." unique_id=864085571]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -202.0
+offset_right = 296.0
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel" unique_id=1154556910]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.5
+offset_right = 32.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Оружие"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=692521524]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PrimaryButton" type="Button" parent="Panel/VBoxContainer" unique_id=1833109393]
+layout_mode = 2
+text = "Винтовка"
+
+[node name="SecondaryButton" type="Button" parent="Panel/VBoxContainer" unique_id=118415856]
+layout_mode = 2
+text = "Пистолет"
+
+[node name="MeleeButton" type="Button" parent="Panel/VBoxContainer" unique_id=2125708628]
+layout_mode = 2
+text = "Меч"
+
+[node name="Close" type="Button" parent="Panel" unique_id=731951868]
+custom_minimum_size = Vector2(0, -40)
+layout_mode = 0
+offset_top = 143.0
+offset_right = 600.0
+offset_bottom = 174.0
+grow_horizontal = 0
+text = "Закрыть"
+
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
